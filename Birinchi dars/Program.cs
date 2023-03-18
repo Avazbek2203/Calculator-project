@@ -9,8 +9,8 @@ namespace Birinchi_dars
         {
 
             Console.Write("Enter first number : ");
-            double a;
-            while (!double.TryParse(Console.ReadLine(), out a))
+            double firstNumber;
+            while (!double.TryParse(Console.ReadLine(), out firstNumber))
             {
                 Console.WriteLine("Please enter a valid number!");
             }
@@ -20,52 +20,52 @@ namespace Birinchi_dars
             Console.Write("*   ");
             Console.Write("/   ");
             Console.WriteLine("%");
-            char b;
-            while (!char.TryParse(Console.ReadLine(), out b) || (b != '+' && b != '-' && b != '*' && b != '/' && b != '%'))
+            char mathimaticalSign;
+            while (!char.TryParse(Console.ReadLine(), out mathimaticalSign) || (mathimaticalSign != '+' && mathimaticalSign != '-' && mathimaticalSign != '*' && mathimaticalSign != '/' && mathimaticalSign != '%'))
             {
                 Console.WriteLine("Please enter a valid mathematical sign!");
             }
             Console.Write("Enter second number : ");
-            double c;
-            while (!double.TryParse(Console.ReadLine(), out c))
+            double secondNumber;
+            while (!double.TryParse(Console.ReadLine(), out secondNumber))
             {
                 Console.WriteLine("Please enter a valid number!");
             }
 
-            if (b == '*')
+            if (mathimaticalSign == '*')
             {
-                Console.WriteLine($"{a} * {c} = {a * c}");
+                Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
             }
-            if (b == '/')
+            if (mathimaticalSign == '/')
             {
-                if (c == 0)
+                if (secondNumber == 0)
                 {
                     Console.WriteLine("Number doesn't divide by zero!");
                 }
                 else
                 {
-                    Console.WriteLine($"{a} / {c} = {a / c}");
+                    Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
                 }
             }
 
-            if (b == '+')
+            if (mathimaticalSign == '+')
             {
-                Console.WriteLine($"{a} + {c} = {a + c}");
+                Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
             }
-            if (b == '-')
+            if (mathimaticalSign == '-')
             {
-                if (c > a)
+                if (secondNumber > firstNumber)
                 {
                     Console.WriteLine("Second number is greater than the first number!");
                 }
                 else
                 {
-                    Console.WriteLine($"{a} - {c} = {a - c}");
+                    Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
                 }
             }
-            if (b == '%')
+            if (mathimaticalSign == '%')
             {
-                Console.WriteLine($"{a} % {c} = {a % c}");
+                Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
             }
 
             Console.WriteLine("========================================================");
